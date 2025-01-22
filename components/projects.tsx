@@ -10,38 +10,39 @@ import { Github, Globe } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management and secure payment processing.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Untitled-Contact",
+    description: "Features a contact form designed to collect user information, including name and email address. This form is intended for users to reach out or submit inquiries.",
+    image: "/untitled-contact.png?height=200&width=300",
     technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
-    demoLink: "https://rpsls-showdown.pages.dev/",
-    githubLink: "https://github.com/AdvaitParab12/RPSLS-Showdown/",
+    demoLink: "https://untitled-contact-isc.pages.dev/",
+    githubLink: "https://github.com/prasadharbare/Untitled-contact",
   },
   {
-    title: "Task Management App",
+    title: "Fisker-Nextjs",
     description: "A collaborative task management application with real-time updates and team communication features.",
     image: "/placeholder.svg?height=200&width=300",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "WebSockets"],
-    demoLink: "https://rpsls-showdown.pages.dev/",
-    githubLink: "https://github.com/AdvaitParab12/RPSLS-Showdown/",
+    demoLink: "",
+    githubLink: "https://github.com/prasadharbare/Fisker-nextjs",
   },
   {
-    title: "Weather Forecast Dashboard",
-    description: "An interactive weather dashboard providing real-time forecasts and historical weather data visualization.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "PrioriTask-V2",
+    description: "A task management application designed to help users organize and prioritize their tasks effectively.",
+    image: "/prioritask.png?height=200&width=300",
     technologies: ["React", "D3.js", "OpenWeatherMap API", "CSS Modules"],
-    demoLink: "https://rpsls-showdown.pages.dev/",
-    githubLink: "https://github.com/AdvaitParab12/RPSLS-Showdown/",
+    demoLink: "https://e678a3f1.prioritask-v2.pages.dev/",
+    githubLink: "https://github.com/prasadharbare/PRIORITASK-V2",
   },
   {
-    title: "Social Media Analytics Tool",
-    description: "A comprehensive analytics tool for social media managers to track engagement and campaign performance.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Wakati-API",
+    description: "Wakati API is an advanced text intelligence platform designed to analyze and calculate text scores with AI modules.",
+    image: "/wakati-api.png?height=200&width=300",
     technologies: ["Vue.js", "Python", "Flask", "SQLAlchemy"],
-    demoLink: "https://rpsls-showdown.pages.dev/",
-    githubLink: "https://github.com/AdvaitParab12/RPSLS-Showdown/",
-  },
-]
+    demoLink: "",
+    githubLink: "https://github.com/tiwakati/wakati",
+  }
+];
+
 
 export default function Projects() {
   return (

@@ -31,9 +31,9 @@ const skillCategories = [
     name: "Tools & Others",
     skills: [
       { name: "Git", icon: GitBranch, description: "Version control" },
-      { name: "Docker", icon: Cloud, description: "Containerization" },
-      { name: "CI/CD", icon: Cpu, description: "Continuous integration and deployment" },
-      { name: "Bash", icon: Terminal, description: "Shell scripting" },
+      { name: "Github", icon: Cloud, description: "Containerization" },
+      { name: "Notion", icon: Cpu, description: "Continuous integration and deployment" },
+      { name: "Figma", icon: Terminal, description: "Shell scripting" },
     ],
     color: "bg-purple-500",
     textColor: "text-purple-500",

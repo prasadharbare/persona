@@ -23,7 +23,7 @@ export default function About() {
           <div className="bg-primary p-1">
             <div className="bg-background dark:bg-secondary">
               <CardHeader>
-                <CardTitle className="text-primary dark:text-primary-foreground">Passionate Developer</CardTitle>
+                <CardTitle className="text-primary dark:text-white">Passionate Developer</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-4 pb-6">
                 <p className="text-muted-foreground dark:text-secondary-foreground">
