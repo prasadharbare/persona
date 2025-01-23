@@ -5,16 +5,16 @@ import { motion } from "framer-motion"
 
 export default function Hero() {
   return (
-    <section className="container mx-auto flex min-h-screen items-center justify-center py-24">
+    <section className="container mx-auto flex min-h-screen items-center justify-center py-24 section-bg">
       <div className="flex flex-col items-center space-y-4 text-center">
-        <motion.h1 
+        <motion.h1
           className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          I am Prasad Harbare
-          <motion.span 
+          <span className="animated-gradient-text text-shadow">I'm Prasad Harbare</span>
+          <motion.span
             className="block text-primary dark:text-primary"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -23,7 +23,7 @@ export default function Hero() {
             Full Stack Developer
           </motion.span>
         </motion.h1>
-        <motion.p 
+        <motion.p
           className="max-w-[700px] text-muted-foreground md:text-xl dark:text-secondary-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -31,9 +31,9 @@ export default function Hero() {
         >
           Building innovative web solutions with modern technologies
         </motion.p>
-        <motion.div 
+        <motion.div
           className="flex space-x-4"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.5 }}
         >
@@ -48,4 +48,5 @@ export default function Hero() {
     </section>
   )
 }
+
 
