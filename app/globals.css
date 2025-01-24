@@ -75,11 +75,6 @@
   }
 }
 
-.main-content {
-  position: relative;
-  z-index: 1;
-}
-
 @keyframes gradient {
   0%,
   100% {
@@ -107,15 +102,5 @@
 
 .text-shadow {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
-}
-
-.animated-balls {
-  opacity: 0.5;
-}
-
-/* Ensure content is above the animated background */
-.relative {
-  position: relative;
-  z-index: 1;
 }
 
