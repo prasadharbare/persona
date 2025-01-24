@@ -14,7 +14,7 @@ const skillCategories = [
       { name: "CSS/Sass", icon: Palette, description: "Styling and animations" },
     ],
     color: "bg-blue-500",
-    textColor: "text-blue-500",
+    textColor: "text-white-500",
   },
   {
     name: "Backend",
@@ -25,7 +25,7 @@ const skillCategories = [
       { name: "GraphQL", icon: Globe, description: "Query language for APIs" },
     ],
     color: "bg-green-500",
-    textColor: "text-green-500",
+    textColor: "text-white-500",
   },
   {
     name: "Tools & Others",
@@ -36,7 +36,7 @@ const skillCategories = [
       { name: "Figma", icon: Terminal, description: "Shell scripting" },
     ],
     color: "bg-purple-500",
-    textColor: "text-purple-500",
+    textColor: "text-white-500",
   },
 ]
 
