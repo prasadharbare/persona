@@ -15,7 +15,7 @@ export default function Hero() {
         >
           <span className="animated-gradient-text text-shadow">I'm Prasad Harbare</span>
           <motion.span
-            className="block text-primary dark:text-primary"
+            className="block text-primary dark:text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
