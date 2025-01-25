@@ -26,8 +26,8 @@ const skillCategories = [
       { name: "CSS", icon: FileType, description: "Styling and layout of web pages" },
       { name: "TypeScript", icon: Code2, description: "Type-safe JavaScript development" },
     ],
-    color: "bg-blue-500",
-    textColor: "text-blue-500",
+    gradient: "bg-gradient-to-br from-purple-300 to blue-100",
+    textColor:  "text-white-800",
   },
   {
     name: "Backend",
@@ -37,8 +37,8 @@ const skillCategories = [
       { name: "MongoDB", icon: Database, description: "NoSQL database" },
       { name: "Next.js", icon: FileCode2, description: "React framework for production" },
     ],
-    color: "bg-green-500",
-    textColor: "text-green-500",
+    gradient: "bg-gradient-to-br from-red-300 to white-100",
+    textColor:  "text-white-800",
   },
   {
     name: "Tools & Others",
@@ -48,8 +48,8 @@ const skillCategories = [
       { name: "Vite", icon: Hexagon, description: "Next generation frontend tooling" },
       { name: "Figma", icon: Figma, description: "UI design and prototyping" },
     ],
-    color: "bg-purple-500",
-    textColor: "text-purple-500",
+    gradient: "bg-gradient-to-br from-yellow-200 to orange-300",
+    textColor:  "text-white-800",
   },
 ]
 
@@ -73,21 +73,25 @@ export default function Skills() {
           className="mb-12"
         >
           <h3 className={`text-2xl font-semibold mb-6 ${category.textColor}`}>{category.name}</h3>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 auto-rows-fr">
             {category.skills.map((skill, skillIndex) => (
               <motion.div
                 key={skill.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: categoryIndex * 0.2 + skillIndex * 0.1, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                className="transform transition-all duration-300 hover:shadow-xl"
               >
-                <Card className={`overflow-hidden ${category.color} text-white`}>
+                <Card
+                  className={`overflow-hidden ${category.gradient} transition-all duration-300 hover:shadow-lg h-full flex flex-col`}
+                >
                   <CardHeader className="pb-2">
-                    <skill.icon className="h-8 w-8 mb-2" />
-                    <CardTitle className="text-lg">{skill.name}</CardTitle>
+                    <skill.icon className={`h-8 w-8 mb-2 ${category.textColor}`} />
+                    <CardTitle className={`text-lg ${category.textColor}`}>{skill.name}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-sm opacity-90">{skill.description}</p>
+                  <CardContent className="flex-grow">
+                    <p className={`text-sm ${category.textColor} opacity-90`}>{skill.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
