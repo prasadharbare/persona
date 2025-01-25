@@ -9,7 +9,7 @@ import { motion } from "framer-motion"; // Correct import
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Full Stack Developer",
+  title: "Prasad-Full Stack Developer",
   description: "Full Stack Developer portfolio showcasing skills and projects",
 };
 

@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: "Fisker-Nextjs",
-    description: "A collaborative task management application with real-time updates and team communication features.",
+    description: "A Car Web Application which changes colours,tyres and Interiors based on user commands.",
     image: "/placeholder.svg?height=200&width=300",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "WebSockets"],
     demoLink: "",
@@ -38,7 +38,7 @@ const projects = [
     description: "Wakati API is an advanced text intelligence platform designed to analyze and calculate text scores with AI modules.",
     image: "/wakati-api.png?height=200&width=300",
     technologies: ["Vue.js", "Python", "Flask", "SQLAlchemy"],
-    demoLink: "",
+    demoLink: "https://wakati.prasadharbare.workers.dev/",
     githubLink: "https://github.com/tiwakati/wakati",
   }
 ];
