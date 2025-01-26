@@ -1,15 +1,16 @@
+// app/layout.tsx
+import Nav from "@/components/nav"; // Ensure this is a default import
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "next-themes";
+import { motion } from "framer-motion";
 import { ModeToggle } from "@/components/mode-toggle";
-import Nav from "@/components/nav";
-import { motion } from "framer-motion"; // Correct import
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Prasad-Full Stack Developer",
+  title: "Portfolio - Full Stack Developer",
   description: "Full Stack Developer portfolio showcasing skills and projects",
 };
 
@@ -27,29 +28,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="sparkles">
-            {Array.from({ length: 50 }).map((_, i) => (
-              <div
-                key={i}
-                className="sparkle"
-                style={{
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 5}s`,
-                }}
-              />
-            ))}
-          </div>
-          <div
-            initial={{ opacity: 0 }} // Motion properties applied here
+          <motion.div
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="relative flex min-h-screen flex-col"
           >
-            <Nav />
+            <Nav />  {/* Correct usage here */}
             <ModeToggle className="fixed bottom-4 right-4 z-50" />
-            <main className="flex-1 relative z-10">{children}</main>
-          </div>
+            <main className="flex-1">{children}</main>
+          </motion.div>
         </ThemeProvider>
       </body>
     </html>

@@ -13,7 +13,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="animated-gradient-text text-shadow">I'm Prasad Harbare</span>
+          <span className="animated-gradient-text text-shadow-bold">I'm Prasad Harbare</span>
           <motion.span
             className="block text-primary dark:text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
             initial={{ opacity: 0 }}
