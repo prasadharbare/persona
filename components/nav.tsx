@@ -10,6 +10,9 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+import { Menu } from "lucide-react"
 import { motion } from "framer-motion"
 
 const navigation = [
@@ -30,9 +33,9 @@ export default function Nav() {
       <nav className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">Portfolio</span>
+            <span className="font-bold">Prasad Harbare</span>
           </Link>
-          <NavigationMenu>
+          <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               {navigation.map((item, index) => (
                 <NavigationMenuItem key={item.name}>
@@ -50,14 +53,45 @@ export default function Nav() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <a
-          href="https://github.com/prasadharbare"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-foreground hover:text-primary transition-colors font-medium px-4"
-        >
-          Prasad Harbare
-        </a>
+        <div className="flex items-center">
+          {/* <a
+            href="https://github.com/prasadharbare"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-block text-foreground hover:text-primary transition-colors font-medium px-4"
+          >
+            Prasad Harbare
+          </a> */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <nav className="flex flex-col space-y-4 mt-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                {/* <a
+                  href="https://github.com/prasadharbare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  Prasad Harbare
+                </a> */}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </nav>
     </motion.div>
   )
